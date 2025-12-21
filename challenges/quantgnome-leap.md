@@ -20,6 +20,8 @@ quantum computers.
 Cryptic puzzles, quirky gnomes, and post-quantum secrets---will you leap
 with me?
 
+<img width="778" height="453" alt="image" src="https://github.com/user-attachments/assets/f29b8a00-94b2-4811-a793-ac86485698ad" />
+
 ------------------------------------------------------------------------
 
 ## 🎯 Challenge Overview
