@@ -19,6 +19,8 @@ Our mission:
 - Enumerate receipts
 - Unmask the gnome’s identity
 
+<img width="1072" height="225" alt="image" src="https://github.com/user-attachments/assets/ec43ae2a-348d-458a-906d-895a72c26bc5" />
+
 ---
 
 ## 🌐 Target Application
