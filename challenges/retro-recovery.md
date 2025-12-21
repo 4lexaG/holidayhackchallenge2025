@@ -29,9 +29,7 @@ Analyze a floppy disk image to:
 
 ## Provided Artifact
 
-<p align="center">
-  <img src="https://www.holidayhackchallenge.com/2025/assets/floppy.img" alt="floppy.img" width="90%">
-</p>
+[![Floppy Disk Image – floppy.img](images/floppy.png)](floppy.img)
 You got yourself a floppy disk image from an old IBM PC! Retro!!!!
 
 ---
