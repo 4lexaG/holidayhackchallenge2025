@@ -34,6 +34,8 @@ The gnomes are getting some dodgy updates, and I need **admin access** to see wh
 
 Ready to help me find a way to bump up our access level, yeah?
 
+<img width="1072" height="225" alt="image" src="https://github.com/user-attachments/assets/ec43ae2a-348d-458a-906d-895a72c26bc5" />
+
 ---
 
 ## 🔍 Step 1 — Authenticate as Low-Privilege User
