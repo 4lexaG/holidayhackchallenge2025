@@ -22,7 +22,7 @@ Our mission:
 
 ## 📦 Provided Artifact
 
-- **floppy.img** — FAT12 floppy disk image from an IBM PC
+- [**floppy.img**](../images/floppy.png) — FAT12 floppy disk image from an IBM PC
 
 ---
 
