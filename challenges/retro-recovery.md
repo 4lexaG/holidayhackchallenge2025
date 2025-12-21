@@ -1,171 +1,159 @@
-# KringleCon 2025 – Act 2, Challenge 1  
-## Retro Recovery  
+# 💾 Retro Recovery – FAT12 Forensics Write-Up
 
 **Difficulty:** 2  
+**Challenge Goal:**  
+Recover deleted or hidden data from a **FAT12 floppy disk image** and uncover a secret message hidden inside a BASIC program.
 
 ---
 
-## Overview
+## 🧠 Scenario Summary
 
-In this challenge, we step into Mark’s retro shop to perform digital archaeology on a classic **FAT12 floppy disk image**.  
-The objective is to recover deleted or hidden data from an IBM PC–era floppy and uncover a secret message embedded inside a BASIC program.
+We step into **Mark’s retro shop** to perform digital archaeology on an old IBM PC–era floppy disk.  
+Although files may appear deleted, FAT filesystems often leave data behind.
 
-This challenge highlights a timeless truth of filesystems: **deleted does not always mean gone**.
-
-> *“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”*  
-> — Alan Turing
-
----
-
-## Challenge Objectives
-
-Analyze a floppy disk image to:
-
-- Enumerate existing, hidden, and deleted files
+Our mission:
+- Analyze the floppy disk image
 - Recover BASIC source code from filesystem artifacts
-- Identify and decode an encoded message hidden in comments
+- Identify and decode a hidden message
+
+> *“Deleted does not always mean gone.”*
 
 ---
 
-## Provided Artifact
+## 📦 Provided Artifact
 
-<a href="../images/floppy.png">
-  <img src="../images/floppy.png" style="height:1em; vertical-align:middle;">
-</a>
-
-You got yourself a floppy disk image from an old IBM PC! Retro!!!!
+- **floppy.img** — FAT12 floppy disk image from an IBM PC
 
 ---
 
-## Tools & Techniques
-
-### Forensic Utilities
+## 🛠️ Tools Used
 
 - **The Sleuth Kit (TSK)**
-  - `fls` — list files and directories (including deleted entries)
+  - `fls` — list files (including deleted entries)
   - `icat` — extract file contents by inode
-- **file** — determine file type
-- **base64** — decode encoded strings
+- **file** — identify file types
+- **base64** — decode encoded data
 
 ---
 
-## Technical Walkthrough
+## 🔍 Investigation Walkthrough
 
-### Step 1: Enumerate Files on the Floppy Image
+### Step 1: Enumerate Files on the Floppy
 
-We begin by listing all files recursively from the root of the filesystem:
+List all files recursively from the root directory:
 
 ```bash
 fls -o 0 -r floppy.img
 ```
 
-**Explanation:**
+**Why this works:**
+- `-o 0` specifies the filesystem offset (standard for raw floppy images)
+- `-r` enables recursive listing
 
-- `-o 0` specifies the filesystem offset (typical for raw floppy images)
-- `-r` enables recursive directory traversal
-
-This output reveals multiple file entries, including deleted or unlinked files that are no longer visible to the operating system.
+This reveals active, hidden, and deleted file entries.
 
 ---
 
-### Step 2: Extract the Primary BASIC Program
+### Step 2: Extract the BASIC Program
 
-One notable file entry appears at **inode 6**. We extract it using `icat`:
+A notable file appears at **inode 6**. Extract it:
 
 ```bash
 icat -o 0 floppy.img 6 > all.bas
 ```
 
-Verify the extracted file type:
+Verify the file type:
 
 ```bash
 file all.bas
 ```
 
 **Result:**
-
 ```
 ASCII text
 ```
 
-This confirms we have recovered readable source code.
+The BASIC source code was successfully recovered.
 
 ---
 
-### Step 3: Identify Hidden or Fragmented Data
+### Step 3: Analyze Residual Data
 
-Another interesting inode (**10**) appears to contain residual data:
+Another inode (**10**) contains leftover data from editing activity:
 
 ```bash
 icat -o 0 floppy.img 10 > hidden_fragment
 ```
 
-Check its file type:
+Check the file type:
 
 ```bash
 file hidden_fragment
 ```
 
 **Result:**
-
 ```
 Nano swap file, pid 4209, user mark, host arcade, file all_i-want_for_christmas.bas, modified
 ```
 
-This suggests remnants of editing activity tied to the BASIC program.
+This confirms remnants of a BASIC editing session.
 
 ---
 
-### Step 4: Recover the Full BASIC Source
+### Step 4: Recover the Full Source File
 
-Re-extract the complete program with a meaningful filename:
+Re-extract the program using a meaningful filename:
 
 ```bash
 icat -o 0 floppy.img 6 > all_i_want_for_christmas.bas
 ```
 
-This ensures we are working with the full and intended source file.
+This ensures we are working with the intended source code.
 
 ---
 
-### Step 5: Locate the Encoded Message
+### Step 5: Locate the Hidden Message
 
-While reviewing the BASIC source, a suspicious comment appears at **line 211**:
+While reviewing the BASIC file, a suspicious comment appears:
 
 ```basic
 REM bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=
 ```
 
-The character set strongly suggests **Base64 encoding**.
+The format strongly suggests **Base64 encoding**.
 
 ---
 
-### Step 6: Decode the Hidden Message
+### Step 6: Decode the Message
 
-Decode the string using `base64`:
+Decode the string:
 
 ```bash
 echo "bWVycnkgY2hyaXN0bWFzIHRvIGFsbCBhbmQgdG8gYWxsIGEgZ29vZCBuaWdodAo=" | base64 -d
 ```
 
 **Decoded Output:**
-
 ```
 merry christmas to all and to all a good night
 ```
 
 ---
 
-## Conclusion
+## 🧩 Final Findings
 
-This challenge demonstrates classic filesystem forensics:
-
-- FAT filesystems preserve data even after deletion
-- BASIC programs can hide secrets in plain sight using comments
-- Simple encodings like Base64 remain effective for obfuscation
-
-A nostalgic reminder that early computing—and its artifacts—still have stories to tell.
+### ✅ Hidden Message (Answer)
+```
+merry christmas to all and to all a good night
+```
 
 ---
 
-🎄 **Challenge Complete** 🎄
+## 🏁 Conclusion
+
+This challenge highlights classic filesystem forensics concepts:
+
+- FAT12 retains data after deletion
+- Swap files and fragments reveal editing history
+- BASIC comments are perfect places to hide encoded messages
+
+💾 A nostalgic dive into retro computing — mystery recovered!
