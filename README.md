@@ -25,7 +25,8 @@ The Counter Hack crew is in the Neighborhood festively preparing for the holiday
 The Gnomes’ nefarious plot seems to involve stealing refrigerator parts. But why?
 
 Objectives:
-1. [Retro Recovery](act1/retro-recovery.md)
+1. [Retro Recovery](challenges/retro-recovery.md)
+2. [Mail Detective](challenges/mail-detective.md)
 
 ---
 
