@@ -29,18 +29,13 @@ Analyze a floppy disk image to:
 
 ## Provided Artifact
 
-- **floppy.img** — FAT12 floppy disk image from an old IBM PC
-
-> Lore note: The disk appears to have lived under an arcade machine in the Retro Store, a classic hiding place for shared warez and experiments written in BASIC.
-
----
-
-## Items
-
-
 <p align="center">
   <img src="https://www.holidayhackchallenge.com/2025/assets/floppy.img" alt="floppy.img" width="90%">
 </p>
+You got yourself a floppy disk image from an old IBM PC! Retro!!!!
+
+---
+
 ## Tools & Techniques
 
 ### Forensic Utilities
