@@ -29,7 +29,10 @@ Analyze a floppy disk image to:
 
 ## Provided Artifact
 
-[![Floppy Disk](../images/floppy.png)](../images/floppy.png)
+<a href="../images/floppy.png">
+  <img src="../images/floppy.png" style="height:1em; vertical-align:middle;">
+</a>
+
 You got yourself a floppy disk image from an old IBM PC! Retro!!!!
 
 ---
