@@ -27,6 +27,8 @@ The Gnomes’ nefarious plot seems to involve stealing refrigerator parts. But w
 Objectives:
 1. [Retro Recovery](challenges/retro-recovery.md)
 2. [Mail Detective](challenges/mail-detective.md)
+3. [IDORable Bistro](challenges/idorable-bistro.md)
+4. [Dosis Network Down](challenges/dosis-network-down.md)
 
 ---
 
