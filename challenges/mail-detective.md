@@ -16,6 +16,8 @@ Our task:
 - Review all emails
 - Identify how and where data is being exfiltrated
 
+<img width="597" height="458" alt="image" src="https://github.com/user-attachments/assets/7e891c4b-20e2-4c11-96b5-f870e672d3d7" />
+
 ---
 
 ## 🔐 Accessing the IMAP Server
