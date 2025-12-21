@@ -39,7 +39,7 @@ users until reaching `admin` 5. Locate the final flag
 
 ## 🔐 Step-by-Step Solution
 
-### 🟢 Step 1 --- Initial Access (`qgnome → gnome1`)
+### 🟢 Step 1: Initial Access (`qgnome → gnome1`)
 
 The initial hint pointed toward **SSH keys and their comments**.\
 Inspecting `~/.ssh/id_rsa.pub` revealed a comment:
@@ -57,7 +57,7 @@ context (Shor's algorithm).
 
 ------------------------------------------------------------------------
 
-### 🟢 Step 2 --- ED25519 (`gnome1 → gnome2`)
+### 🟢 Step 2: ED25519 (`gnome1 → gnome2`)
 
 Inside `/home/gnome1/.ssh/`:
 
@@ -74,7 +74,7 @@ ED25519 is smaller and faster than RSA, but still **not quantum‑safe**.
 
 ------------------------------------------------------------------------
 
-### 🟢 Step 3 --- MAYO (`gnome2 → gnome3`)
+### 🟢 Step 3: MAYO (`gnome2 → gnome3`)
 
 Inside `/home/gnome2/.ssh/`:
 
@@ -91,7 +91,7 @@ This introduces **MAYO**, a post‑quantum signature scheme.
 
 ------------------------------------------------------------------------
 
-### 🟢 Step 4 --- Hybrid ECDSA + SPHINCS+ (`gnome3 → gnome4`)
+### 🟢 Step 4: Hybrid ECDSA + SPHINCS+ (`gnome3 → gnome4`)
 
 Inside `/home/gnome3/.ssh/`:
 
@@ -109,7 +109,7 @@ signatures.
 
 ------------------------------------------------------------------------
 
-### 🟢 Step 5 --- Security Level 5 (`gnome4 → admin`)
+### 🟢 Step 5: Security Level 5 (`gnome4 → admin`)
 
 Inside `/home/gnome4/.ssh/`:
 
@@ -127,7 +127,7 @@ This is a **NIST Security Level 5** configuration, equivalent to
 
 ------------------------------------------------------------------------
 
-## 🏁 Final Step --- Flag Retrieval
+## 🏁 Final Step: Flag Retrieval
 
 The final instructions indicated access near the SSH daemon.
 
