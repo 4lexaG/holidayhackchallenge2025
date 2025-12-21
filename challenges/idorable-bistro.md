@@ -19,8 +19,6 @@ Our mission:
 - Enumerate receipts
 - Unmask the gnome’s identity
 
-<img width="1072" height="225" alt="image" src="https://github.com/user-attachments/assets/ec43ae2a-348d-458a-906d-895a72c26bc5" />
-
 ---
 
 ## 🌐 Target Application
@@ -37,6 +35,9 @@ The homepage explains a QR-based receipt verification flow and includes a commen
 ```
 
 This gives us our initial foothold.
+
+<img width="482" height="541" alt="image" src="https://github.com/user-attachments/assets/30947df6-fc25-447b-9b4d-346ce648f7ab" />
+
 
 ---
 
