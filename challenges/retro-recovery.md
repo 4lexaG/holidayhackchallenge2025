@@ -35,6 +35,12 @@ Analyze a floppy disk image to:
 
 ---
 
+## Items
+
+
+<p align="center">
+  <img src="https://www.holidayhackchallenge.com/2025/assets/floppy.img" alt="floppy.img" width="90%">
+</p>
 ## Tools & Techniques
 
 ### Forensic Utilities
