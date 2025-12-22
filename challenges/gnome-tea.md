@@ -5,7 +5,7 @@
 
 ---
 
-## Scenario Summary
+## 🧠 Scenario Summary
 
 GnomeTea is a social network used by gnomes to “spill the tea” on one another. The application is built on Firebase, exposing client-side configuration and relying heavily on frontend logic for authorization checks.
 
@@ -13,7 +13,7 @@ Thomas (CraHan) suspects the gnomes are using a secret passphrase and asks for h
 
 ---
 
-## Reconnaissance
+## 🔍 Reconnaissance
 
 ### Firebase Client Configuration
 
