@@ -29,6 +29,9 @@ Objectives:
 2. [Mail Detective](challenges/mail-detective.md)
 3. [IDORable Bistro](challenges/idorable-bistro.md)
 4. [Dosis Network Down](challenges/dosis-network-down.md)
+5. [Rogue Gnome Identity Provider](challenges/rogue-gnome-identity-provider.md)
+6. [Quantgnome Leap](challenges/quantgnome-leap.md)
+7. [Going in Reverse](challenges/going-in-reverse.md)
 
 ---
 
