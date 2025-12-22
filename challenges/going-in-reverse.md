@@ -25,7 +25,7 @@ Kevin, a nostalgic retro-tech fan, finds an old Commodore 64 disk containing a ‚
 70 IF CHR$(ASC(MID$(PASS$,I,1)) XOR 7) <> MID$(ENC_PASS$,I,1) THEN GOTO 90
 80 NEXT I
 85 FLAG$ = "" : FOR I = 1 TO LEN(ENC_FLAG$) : FLAG$ = FLAG$ + CHR$(ASC(MID$(ENC_FLAG$,I,1)) XOR 7) : NEXT I : PRINT FLAG$
-
+```
 
 ## üîç Step-by-Step Analysis
 
@@ -35,12 +35,14 @@ If it matches the encrypted string ENC_PASS$, access is granted.
 
 ```basic
 IF CHR$(ASC(MID$(PASS$,I,1)) XOR 7) <> MID$(ENC_PASS$,I,1) THEN GOTO 90
+```
 
 2. Decryption formula
 Since the program XORs the input with 7 and compares it to ENC_PASS$, we can reverse this logic to find the real password:
 
 ```basic
 PASS_CHAR = CHR$(ASC(ENC_PASS_CHAR) XOR 7)
+```
 
 3. Decrypted password
 Performing XOR 7 on "D13URKBT" gives:
@@ -52,6 +54,7 @@ Once authenticated, the program decodes ENC_FLAG$ using the same XOR 7 technique
 
 ```basic
 FLAG_CHAR = CHR$(ASC(ENC_FLAG_CHAR) XOR 7)
+```
 
 Running this operation reveals the hidden flag.
 
@@ -64,13 +67,11 @@ flag = ''.join(chr(ord(c) ^ 7) for c in enc_flag)
 
 print("Password:", password)
 print("Flag:", flag)
+```
 
 Password: C64RULES
 Flag: CTF{frost-plan:compressors,coolant,oil}
 
 
 
-
-
-90 PRINT "ACCESS DENIED"
-100 END
+90 PRINT "ACCESS DENIED100 END
