@@ -47,10 +47,10 @@ Are you ready to help me **hack one of these rebellious bots** and turn it again
 
 ## 🔐 Gaining Control of the Gnome
 
-<video src="../images/hackagnome.mp4" controls width="600">
-  ...
+<video controls width="600">
+  <source src="../images/hackagnome.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
-
 ## 📌 Key Takeaways
 
 - 
