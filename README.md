@@ -39,6 +39,14 @@ Objectives:
 
 The Gnomes want to transform the neighborhood so that it’s frozen solid year-round, an environmental disaster. But who is the mastermind behind the Gnomes’ wickedness?
 
+Objectives
+1. [Gnome Tea](challenges/gnome-tea.md)
+2. [Hack A Gnome](challenges/hack-a-gnome.md)
+3. Snowcat RCE & Priv Esc
+4. Schrödinger's Scope
+5. Find and Shutdown Frosty's Snowglobe Machine 
+6. On the Wire
+7. Free Ski
 ---
 
 🎅 **Happy Hacking and Happy Holidays!**
