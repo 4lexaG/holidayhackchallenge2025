@@ -47,7 +47,7 @@ Are you ready to help me **hack one of these rebellious bots** and turn it again
 
 ## 🔐 Gaining Control of the Gnome
 
-<video src="../images/hackagnome" controls width="600">
+<video src="../images/hackagnome.mp4" controls width="600">
   ...
 </video>
 
