@@ -106,10 +106,7 @@ COMMAND_MAP = {
 
 Using these, the gnome could move crates and reach the control console.
 
-<video width="640" height="360" controls>
-  <source src="../images/hag.mp4" type="video/mp4">
- error <code>video</code>.
-</video>
+[![Ver video](../images/hag-thumb.png)](https://github.com/4lexaG/holidayhackchallenge2025/blob/main/images/hag.mp4)
 
 ---
 
