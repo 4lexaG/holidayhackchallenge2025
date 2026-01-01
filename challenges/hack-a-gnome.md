@@ -8,8 +8,8 @@ Davis in the Data Center is fighting a gnome army — join the hack‑a‑gnome 
 
 ## 🧠 Scenario Summary
 
-Hi, my name is **Chris**. I enjoy miniature war gaming and painting minis. I’m passionate about open‑source projects and amateur robotics.  
-In my free time, I love hiking and kayaking, and I’m a big fan of single‑player video games with rich storylines.
+This challenge chains **Prototype Pollution**, **EJS Server‑Side Template Injection**, and **Remote Code Execution** to gain root command execution on a smart gnome controller.  
+Once shell access is obtained, the task shifts to **CAN bus reverse engineering** to identify undocumented movement commands and physically control the robot.
 
 ---
 
@@ -37,27 +37,107 @@ Are you ready to help me **hack one of these rebellious bots** and turn it again
 
 ---
 
-## 🛠️ Approach Overview
+## 1. Vulnerability Summary
+
+| Stage | Vulnerability | Impact |
+|-----|--------------|--------|
+| Web API | Prototype Pollution | Arbitrary object property overwrite |
+| Templating | EJS SSTI | Arbitrary JS execution |
+| OS | Command Execution | Root shell |
+| Embedded | CAN Bus Logic Flaw | Physical device control |
 
 ---
 
-## 🧪 Exploitation Steps
+## 2. Prototype Pollution via `/ctrlsignals`
+
+The `/ctrlsignals` endpoint accepts a JSON object via URL encoding.
+
+By abusing unsafe object merging, `Object.prototype` was polluted, allowing control of internal EJS options.
 
 ---
 
-## 🔐 Gaining Control of the Gnome
+## 3. EJS Server‑Side Template Injection (SSTI)
+
+The polluted `outputFunctionName` property is used by EJS during rendering.  
+Injected JavaScript executes when `/stats` is accessed.
+
+This results in **root‑level command execution**.
+
+---
+
+## 4. File System Enumeration
+
+Command execution was used to exfiltrate files via Burp Collaborator using base64 encoding.
+
+Key files:
+- `canbus_client.py`
+- `README.md`
+
+---
+
+## 5. CAN Bus Documentation Analysis
+
+The leaked README documented CAN IDs on `gcan0` but explicitly stated movement commands were unstable.
+
+---
+
+## 6. Reverse Engineering Movement Commands
+
+Brute‑forcing CAN IDs revealed valid movement signals.
+
+```python
+for cmd_id in range(0x1FF, 0x205):
+    send_command(bus, cmd_id)
+    time.sleep(1.3)
+```
+
+---
+
+## 7. Final Command Mapping
+
+```python
+COMMAND_MAP = {
+    "up":    0x201,
+    "down":  0x202,
+    "left":  0x203,
+    "right": 0x204,
+}
+```
+
+Using these, the gnome could move crates and reach the control console.
 
 <video controls width="600">
   <source src="../images/hackagnome.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-## 📌 Key Takeaways
-
-- 
-- 
-- 
-- 
 
 ---
 
-## ✅ Conclusion
+## 8. Impact
+
+- Full server compromise
+- Root RCE
+- Physical device manipulation
+
+---
+
+## 9. Mitigations
+
+- Block prototype keys
+- Disable dynamic EJS options
+- Authenticate CAN frames
+
+---
+
+## 10. References
+
+- https://portswigger.net/web-security/nosql-injection
+- https://eslam.io/posts/ejs-server-side-template-injection-rce/
+- https://www.kayssel.com/newsletter/issue-24/
+- https://learn.microsoft.com/en-us/cosmos-db/query/functions
+- https://www.kvaser.com/about-can/
+
+---
+
+🎅 Hack responsibly.
+
