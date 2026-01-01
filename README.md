@@ -42,7 +42,7 @@ The Gnomes want to transform the neighborhood so that it’s frozen solid year-r
 Objectives
 1. [Gnome Tea](challenges/gnome-tea.md)
 2. [Hack A Gnome](challenges/hack-a-gnome.md)
-3. Snowcat RCE & Priv Esc
+3. [Snowcat RCE & Priv Esc](challenges/snowcat-rce-privesc.md)
 4. Schrödinger's Scope
 5. Find and Shutdown Frosty's Snowglobe Machine 
 6. On the Wire
