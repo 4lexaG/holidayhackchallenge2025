@@ -162,7 +162,10 @@ whoami
 ```
 
 Full root access obtained.
+
 <img width="752" height="227" alt="image" src="https://github.com/user-attachments/assets/50c5134f-d11a-41db-9fd5-e3e546e6c4d4" />
+
+<img width="486" height="90" alt="image" src="https://github.com/user-attachments/assets/1db78a20-58f2-4618-b074-18def617b906" />
 
 ---
 
