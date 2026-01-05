@@ -1,4 +1,5 @@
-# 🎄 SANS Holiday Hack Challenge 2025
+# 🎄 SANS Holiday Hack Challenge 2025: Revenge of the Gnome(s)!
+
 ### *holidayhackchallenge2025*
 
 Welcome to the **SANS Holiday Hack Challenge 2025**!  
