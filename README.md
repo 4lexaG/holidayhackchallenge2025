@@ -17,7 +17,7 @@ Each year, the Counter Hack crew invites the community to sharpen their cybersec
 ### ❄️ Act I — *Gnomes in Your Home!*
 
 The Counter Hack crew is in the Neighborhood festively preparing for the holidays when they are suddenly overrun by lively Gnomes in Your Home! There must have been some magic in those Gnomes, because, due to some unseen spark, some haunting hocus pocus, they have come to life and are now scurrying around the Neighborhood.
-1. Holiday Hack Orientation](challenges/act_I.md#holiday-hack-orientation)
+1. Holiday Hack Orientation]
 2. Its All About Defang
 3. Neighborhood Watch Bypass
 4. Santa's Gift-Tracking Service Port Mystery
@@ -28,6 +28,7 @@ The Counter Hack crew is in the Neighborhood festively preparing for the holiday
 9. Spare Key
 10. The Open Door
 11. Owner
+
 [writeup](challenges/act_I.md#holiday-hack-orientation)
 
 ---
