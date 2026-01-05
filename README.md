@@ -17,18 +17,18 @@ Each year, the Counter Hack crew invites the community to sharpen their cybersec
 ### ❄️ Act I — *Gnomes in Your Home!*
 
 The Counter Hack crew is in the Neighborhood festively preparing for the holidays when they are suddenly overrun by lively Gnomes in Your Home! There must have been some magic in those Gnomes, because, due to some unseen spark, some haunting hocus pocus, they have come to life and are now scurrying around the Neighborhood.
-1. [Holiday Hack Orientation](challenges/act_I.md#holiday-hack-orientation)
-2. [Its All About Defang](challenges/retro-recovery.md)
-3. [Neighborhood Watch Bypass](challenges/retro-recovery.md)
-4. [Santa's Gift-Tracking Service Port Mystery](challenges/retro-recovery.md)
-5. [Visual Networking Thinger](challenges/retro-recovery.md)
-6. [Visual Firewall Thinger](challenges/retro-recovery.md)
-7. [Intro to Nmap](challenges/retro-recovery.md)
-8. [Blob Storage Challenge in the Neighborhood](challenges/retro-recovery.md)
-9. [Spare Key](challenges/retro-recovery.md)
-10. [The Open Door](challenges/retro-recovery.md)
-11.  [Owner](challenges/retro-recovery.md)
-
+1. Holiday Hack Orientation](challenges/act_I.md#holiday-hack-orientation)
+2. Its All About Defang
+3. Neighborhood Watch Bypass
+4. Santa's Gift-Tracking Service Port Mystery
+5. Visual Networking Thinger
+6. Visual Firewall Thinger
+7. Intro to Nmap
+8. Blob Storage Challenge in the Neighborhood
+9. Spare Key
+10. The Open Door
+11. Owner
+[writeup](challenges/act_I.md#holiday-hack-orientation)
 
 ---
 
